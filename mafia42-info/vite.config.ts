@@ -3,14 +3,14 @@ import react from "@vitejs/plugin-react-swc";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
-  base: "/Mafia42-Info/", // ⚠️ 여기 repo 이름과 동일해야 함
+  base: "/Mafia42-Info/",
   plugins: [
     react(),
     VitePWA({
       registerType: "autoUpdate",
       manifest: {
         name: "Mafia42-Info",
-        short_name: "Mafia42",
+        short_name: "M42",
         start_url: ".",
         display: "standalone",
         background_color: "#ffffff",
