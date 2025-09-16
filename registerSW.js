@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/Mafia42-Info/sw.js', { scope: '/Mafia42-Info/' })})}
