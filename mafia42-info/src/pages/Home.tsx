@@ -1,4 +1,3 @@
-import React from "react";
 import "./Home.css"; // CSS 따로 분리
 
 const Home = () => {
