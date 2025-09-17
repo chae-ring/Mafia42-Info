@@ -1,9 +1,8 @@
-/* ===== 페이지 컨테이너 ===== */
 .home-container {
-  position: fixed; /* 화면에 고정 */
-  inset: 0; /* top/right/bottom/left = 0 */
-  width: auto; /* inset 쓰면 %폭 필요 없음 */
-  min-height: 100dvh; /* 모바일 100vh 이슈 회피 */
+  position: fixed;
+  inset: 0;
+  width: auto;
+  min-height: 100dvh;
 
   display: flex;
   flex-direction: column;
@@ -13,24 +12,22 @@
   background: #000;
   color: #fff;
 
-  /* iOS PWA 노치/홈바 안전영역 고려 */
   padding-top: max(5vh, env(safe-area-inset-top));
   padding-bottom: max(5vh, env(safe-area-inset-bottom));
 }
 
-/* ===== 내부 레이아웃 ===== */
 .logo {
   font-size: 5rem;
-  margin-top: 5vh;
+  margin-top: 15vh;
 }
 
 .channels {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: min(90vw, 600px); /* 화면 기준 중앙 폭 제한 */
+  width: min(90vw, 600px);
   align-items: center;
-  margin: 0 auto 5vh;
+  margin: 0 auto 20vh;
 }
 
 .channel-card {
@@ -50,7 +47,6 @@
   transform: translateY(-5px);
 }
 
-/* ===== 반응형 ===== */
 @media (max-width: 768px) {
   .channels {
     width: 95vw;
