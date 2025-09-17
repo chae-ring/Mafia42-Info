@@ -1,4 +1,4 @@
-import "./Home.css"; // CSS 따로 분리
+import "./Home.css";
 
 const Home = () => {
   const channels = ["Channel 1", "Channel 2", "Channel 3", "Channel 4"];

@@ -1,5 +1,5 @@
 .home-container {
-  width: 200%;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -9,12 +9,12 @@
   background-color: #000;
   color: #fff;
 
-  box-sizing: border-box; /* 패딩 포함 폭 계산 */
+  box-sizing: border-box;
 }
 
 .logo {
   font-size: 5rem;
-  margin-top: 5vh; /* 화면 중앙보다 위로 */
+  margin-top: 5vh;
 }
 
 .channels {
@@ -24,7 +24,7 @@
   width: 90%;
   max-width: 600px;
   align-items: center;
-  margin: 0 auto 5vh; /* 수평 중앙 */
+  margin: 0 auto 5vh;
 }
 
 .channel-card {
@@ -45,7 +45,6 @@
   transform: translateY(-5px);
 }
 
-/* 반응형 */
 @media (max-width: 768px) {
   .channels {
     width: 95%;
