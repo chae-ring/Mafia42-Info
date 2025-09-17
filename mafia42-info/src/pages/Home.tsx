@@ -9,8 +9,8 @@ const Home = () => {
 
   const channels: Channel[] = [
     { label: "계산기" },
-    { label: "카드강화 시뮬레이션" },
-    { label: "컬렉션 & 레벨보상", path: "/rewards" },
+    { label: "카드,엽서 교환 커뮤니티" },
+    { label: "장착 도감", path: "/rewards" },
     { label: "업데이트 및 게임 내 정보" },
   ];
 
