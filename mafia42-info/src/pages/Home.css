@@ -1,17 +1,24 @@
+/* ===== 페이지 컨테이너 ===== */
 .home-container {
-  width: 100%;
-  min-height: 100vh;
+  position: fixed; /* 화면에 고정 */
+  inset: 0; /* top/right/bottom/left = 0 */
+  width: auto; /* inset 쓰면 %폭 필요 없음 */
+  min-height: 100dvh; /* 모바일 100vh 이슈 회피 */
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 5vh 0;
-  background-color: #000;
+
+  background: #000;
   color: #fff;
 
-  box-sizing: border-box;
+  /* iOS PWA 노치/홈바 안전영역 고려 */
+  padding-top: max(5vh, env(safe-area-inset-top));
+  padding-bottom: max(5vh, env(safe-area-inset-bottom));
 }
 
+/* ===== 내부 레이아웃 ===== */
 .logo {
   font-size: 5rem;
   margin-top: 5vh;
@@ -21,8 +28,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 90%;
-  max-width: 600px;
+  width: min(90vw, 600px); /* 화면 기준 중앙 폭 제한 */
   align-items: center;
   margin: 0 auto 5vh;
 }
@@ -35,19 +41,19 @@
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  border-radius: 10px;
+  border-radius: 16px;
   cursor: pointer;
   transition: transform 0.2s, background-color 0.2s;
 }
-
 .channel-card:hover {
   background-color: #444;
   transform: translateY(-5px);
 }
 
+/* ===== 반응형 ===== */
 @media (max-width: 768px) {
   .channels {
-    width: 95%;
+    width: 95vw;
   }
   .channel-card {
     font-size: 1.2rem;
