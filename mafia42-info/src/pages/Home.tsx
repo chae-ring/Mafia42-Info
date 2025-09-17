@@ -8,10 +8,10 @@ const Home = () => {
   const navigate = useNavigate();
 
   const channels: Channel[] = [
-    { label: "계산기" },
-    { label: "카드,엽서 교환 커뮤니티" },
-    { label: "장착 도감", path: "/rewards" },
-    { label: "업데이트 및 게임 내 정보" },
+    { label: "계산기", path: "/calculator" },
+    { label: "카드,엽서 교환 커뮤니티", path: "/community" },
+    { label: "장착 도감", path: "/collection" },
+    { label: "업데이트 및 게임 내 정보", path: "/info" },
   ];
 
   const go = (path?: string) => {
