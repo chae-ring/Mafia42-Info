@@ -1,7 +1,7 @@
 .home-container {
   position: fixed;
   inset: 0;
-  width: auto;
+  width: 100%;
   min-height: 100dvh;
 
   display: flex;
