@@ -5,6 +5,10 @@ import Collection from "./pages/Collection";
 import Info from "./pages/Info";
 import Calculator from "./pages/Calculator";
 import Community from "./pages/Community";
+import Card from "./pages/Community/Card";
+import Letter from "./pages/Community/Letter";
+import Spy from "./pages/Community/Spy";
+import Event from "./pages/Community/Event";
 
 function App() {
   return (
@@ -16,6 +20,10 @@ function App() {
         <Route path="/calculator" element={<Calculator />} />
         <Route path="/info" element={<Info />} />
         <Route path="/community" element={<Community />} />
+        <Route path="/community/card" element={<Card />} />
+        <Route path="/community/letter" element={<Letter />} />
+        <Route path="/community/spy" element={<Spy />} />
+        <Route path="/community/event" element={<Event />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </HashRouter>

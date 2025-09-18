@@ -1,49 +1,20 @@
 // src/pages/Home.tsx
 import "./Home.css";
-import { useNavigate } from "react-router-dom";
+import ChannelList from "../components/ChannelList";
+import type { Channel } from "../types/channel";
 
-type Channel = { label: string; path?: string };
+const channels: Channel[] = [
+  { label: "계산기", path: "/calculator" },
+  { label: "각종 커뮤니티", path: "/community" },
+  { label: "장착 도감", path: "/collection" },
+  { label: "업데이트 및 게임 내 정보", path: "/info" },
+];
 
-const Home = () => {
-  const navigate = useNavigate();
-
-  const channels: Channel[] = [
-    { label: "계산기", path: "/calculator" },
-    { label: "카드,엽서 교환 커뮤니티", path: "/community" },
-    { label: "장착 도감", path: "/collection" },
-    { label: "업데이트 및 게임 내 정보", path: "/info" },
-  ];
-
-  const go = (path?: string) => {
-    if (!path) return;
-    navigate(path);
-  };
-
+export default function Home() {
   return (
     <div className="home-container">
       <h1 className="logo">M42</h1>
-      <div className="channels">
-        {channels.map((c) => (
-          <div
-            key={c.path ?? c.label}
-            className="channel-card"
-            role="button"
-            tabIndex={0}
-            onClick={() => go(c.path)}
-            onKeyDown={(e) => {
-              if (!c.path) return;
-              if (e.key === "Enter" || e.key === " " || e.code === "Space") {
-                e.preventDefault();
-                navigate(c.path);
-              }
-            }}
-          >
-            {c.label}
-          </div>
-        ))}
-      </div>
+      <ChannelList channels={channels} />
     </div>
   );
-};
-
-export default Home;
+}
